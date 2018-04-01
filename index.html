@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <title>QiaWan | Home</title>
+</head>
+<body>
+    <script>
+        $(document).ready(function() {
+            $('select').material_select();
+        });        
+    </script> 
+    <section id="qw-main-component">
+        <div class="qw-header container">
+            <div class="qw-header-bg"></div>
+            <div class="qw-header-content">
+                <qw-header-sub v-if="showSelection == true && areaCode == 0" @hide="showSelection = false" @clicked="showArea"></qw-header-sub>
+            </div>
+            <div class="qw-results-wrapper">
+                <qw-results-bsa v-if="showSelection == false && areaCode == 1"></qw-results-bsa>
+                <qw-results-pj v-if="showSelection == false && areaCode == 2"></qw-results-pj>
+                <qw-results-tmr v-if="showSelection == false && areaCode == 3"></qw-results-tmr>
+            </div>         
+        </div>
+        <div class="fixed-action-btn">
+            <a class="btn-floating btn-large red pulse">
+                <i class="large material-icons" title="Help">help</i>
+            </a>
+            <ul>
+                <li><a class="btn-floating green" @click="screenClear()"><i class="material-icons" title="Home">home</i></a></li>
+                <li><a class="btn-floating blue" href="/about.html"><i class="material-icons" title="About">contact_mail</i></a></li>
+            </ul>
+        </div>
+    </section>
+</body>
+
+<script src="app.js"></script>
+</html>
+
+<!-- <div class="qw-results-link">
+    <a href="#">This is a link</a>
+</div> -->
