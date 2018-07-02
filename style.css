@@ -65,7 +65,9 @@ h1, h2, h3 {
     font-size: 1.25rem;   
 }
 .qw-button-search {
-    font-size: 1.15rem;
+    font-weight: bold;
+    font-size: 1.25rem;
+    font-family: 'Amatic SC', cursive;
 }
 .select-wrapper span.caret {
     color: #fff;
@@ -136,7 +138,7 @@ h1, h2, h3 {
     background-image: url("img/qw-about-bg.jpeg");
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
     position: absolute;
     top: 0;
     left: 0;

@@ -19,7 +19,7 @@ Vue.component('qw-header-sub', {
     `,
     data () {
         return {
-            intro: 'Welcome to Qia Wan Restaurant Searcher',
+            intro: 'Welcome to Qia Wan Restaurant Finder',
             areaSelection: '',
             areaList: {
                 1: "Bandar Seri Alam",
